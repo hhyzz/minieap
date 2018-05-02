@@ -7,7 +7,7 @@
  * as well as a `new()` function which constructs its _if_impl structure (produce a new instance).
  * The `new()` function must be registered by IF_IMPL_INIT() macro.
  *
- * Each memeber function takes the pointer to the structure/instance as first parameter.
+ * Each member function takes the pointer to the structure/instance as first parameter.
  *
  * Take a look at if_impl/sockraw/if_impl_sockraw.c for example.
  */
@@ -65,7 +65,7 @@ typedef struct _if_impl {
       *
       * Return: if the setup was successful
       */
-    RESULT (*setup_capture_params)(struct _if_impl* this, short eth_protocol, int promisc);
+    RESULT (*setup_capture_params)(struct _if_impl* this, unsigned short eth_protocol, int promisc);
 
     /*
      * Prepare the interface, using all the parameters given before (name, proto, promisc etc).
